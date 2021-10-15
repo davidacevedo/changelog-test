@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://www.github.com/davidacevedo/changelog-test/compare/v1.0.0...v1.0.1) (2021-10-15)
+
+
+### Bug Fixes
+
+* delete a character ([c082e1f](https://www.github.com/davidacevedo/changelog-test/commit/c082e1fca91dbe6d8ee35f4ab386278ed861d385))
+
 ## 1.0.0 (2021-10-15)
 
 
