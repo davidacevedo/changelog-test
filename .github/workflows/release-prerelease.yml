@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - otherBranch
 name: release-please
 jobs:
   release-please:
