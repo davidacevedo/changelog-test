@@ -13,7 +13,7 @@ jobs:
           release-type: node
           package-name: release-please-action
       - name: Testing
-        run: echo "${{ steps.outputs.major }}.${{ steps.release-please.outputs.minor }}.${{ steps.release-please.outputs.patch }}"
+        run: echo "Stub here ${{ steps.release-please.outputs.release_created}}  ${{ steps.release-please.outputs.major }}.${{ steps.release-please.outputs.minor }}.${{ steps.release-please.outputs.patch }}"
       # - uses: actions/checkout@v2
       #   with:
       #     stub: ${{ steps.release-please.outputs.major }}
