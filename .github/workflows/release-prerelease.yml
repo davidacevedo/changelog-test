@@ -8,7 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release-please
         with:
-          token: ${{ secrets.COMMIT_KEY }}
           release-type: node
           package-name: release-please-action
+      - uses: actions/checkout@v2
+        with:
+          stub: ${{ steps.release-please.outputs.major }}
