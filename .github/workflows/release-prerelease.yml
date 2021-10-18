@@ -10,6 +10,7 @@ jobs:
       - uses: GoogleCloudPlatform/release-please-action@v2
         id: release-please
         with:
+          token: ${{ secrets.WORKFLOW_GITHUB_KEY }}
           release-type: node
           package-name: release-please-action
       - name: Testing
