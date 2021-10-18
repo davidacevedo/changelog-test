@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.1.1](https://www.github.com/davidacevedo/changelog-test/compare/v1.1.0...v1.1.1) (2021-10-18)
+
+
+### Bug Fixes
+
+* demo testing ([36cceeb](https://www.github.com/davidacevedo/changelog-test/commit/36cceeb9f222f53f19869c2b9f580cd5d572f6e6))
+
 ## [1.1.0](https://www.github.com/davidacevedo/changelog-test/compare/v1.0.0...v1.1.0) (2021-10-18)
 
 
