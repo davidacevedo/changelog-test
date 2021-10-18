@@ -12,6 +12,8 @@ jobs:
         with:
           release-type: node
           package-name: release-please-action
-      - uses: actions/checkout@v2
-        with:
-          stub: ${{ steps.release-please.outputs.major }}
+      - name: Testing
+        run: echo "${{ steps.release-please.outputs.major }}.${{ steps.release-please.outputs.minor }}.${{ steps.release-please.outputs.patch }}"
+      # - uses: actions/checkout@v2
+      #   with:
+      #     stub: ${{ steps.release-please.outputs.major }}
