@@ -22,11 +22,26 @@ jobs:
       - name: Testing
         run: echo "Stub here ${{ steps.release-please.outputs.pr }}"
       - uses: actions/github-script@v5
+        if: ${{ steps.release-please.outputs.pr }}
+        env:
+          PR_NUM: ${{ steps.release-please.outputs.pr }}
         with:
           script: |
             console.log(context)
             console.log('hi')
-            console.log(process.env)
+            console.log(process.env.PR_NUM)
+            const {execSync} = require('child_process');
+            const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
+            const { data: pullRequest } = await octokit.rest.pulls.get({
+              owner,
+              repo,
+              pull_number: process.env.PR_NUM,
+            });
+
+            console.log(pullRequest)
       # - uses: actions/checkout@v2
       #   with:
       #     stub: ${{ steps.release-please.outputs.major }}
+
+# - uses: actions/checkout@v2
+#         if: ${{ steps.tag-release.outputs.release_created }}
