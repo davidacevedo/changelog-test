@@ -2,7 +2,7 @@ name: Update docs for release
 on:
   push:
     branches:
-      - release-*
+      - test
 jobs:
   prepare-dist:
     runs-on: ubuntu-latest
@@ -10,12 +10,20 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '14.x'
           check-latest: true
-      - name: Install dependencies
-        run: npm ci
-      - name: Prepare dist
-        run: npm run docs
-      - uses: stefanzweifel/git-auto-commit-action@v4
+          registry-url: 'registry.npmjs.org/'
+      - uses: actions/setup-node@v2
         with:
-          commit_message: 'Update storybook for ${GITHUB_REF##*/}'
+          registry-url: 'https://npm.pkg.github.com'
+      - run: ls
+      - run: echo ${RUNNER_TEMP}
+      - run: ls ${RUNNER_TEMP}
+      - run: cat ${RUNNER_TEMP}/.npmrc
+      # - name: Install dependencies
+      #   run: npm ci
+      # - name: Prepare dist
+      #   run: npm run docs
+      # - uses: stefanzweifel/git-auto-commit-action@v4
+      #   with:
+      #     commit_message: 'Update storybook for ${GITHUB_REF##*/}'
