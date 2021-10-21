@@ -32,7 +32,7 @@ jobs:
             console.log(process.env.PR_NUM)
             const {execSync} = require('child_process');
             const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
-            const { data: pullRequest } = await octokit.rest.pulls.get({
+            const { data: pullRequest } = await github.rest.pulls.get({
               owner,
               repo,
               pull_number: process.env.PR_NUM,
