@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "docs": "date > date.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

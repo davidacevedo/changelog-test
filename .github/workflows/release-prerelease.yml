@@ -26,22 +26,24 @@ jobs:
         env:
           PR_NUM: ${{ steps.release-please.outputs.pr }}
         with:
+          id: find-branch
+          result-encoding: string
           script: |
-            console.log(context)
-            console.log('hi')
-            console.log(process.env.PR_NUM)
-            const {execSync} = require('child_process');
             const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
             const { data: pullRequest } = await github.rest.pulls.get({
               owner,
               repo,
               pull_number: process.env.PR_NUM,
             });
-
-            console.log(pullRequest.head.ref)
-      # - uses: actions/checkout@v2
-      #   with:
-      #     stub: ${{ steps.release-please.outputs.major }}
+            return pullRequest.head.ref
+      - uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.find-branch.outputs.result }}
+      - run: npm run docs
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Update storybook for ${GITHUB_REF##*/}'
+      
 
 # - uses: actions/checkout@v2
 #         if: ${{ steps.tag-release.outputs.release_created }}
