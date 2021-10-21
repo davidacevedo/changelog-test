@@ -7,19 +7,21 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
-      # - uses: GoogleCloudPlatform/release-please-action@v2
-      #   id: release-please
-      #   with:
-      #     token: ${{ secrets.WORKFLOW_GITHUB_KEY }}
-      #     release-type: node
-      #     package-name: release-please-action
-      - uses: actions/checkout@v2
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        id: release-please
+        with:
+          token: ${{ secrets.WORKFLOW_GITHUB_KEY }}
+          release-type: node
+          package-name: release-please-action
       - name: Extract branch name
         shell: bash
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
       - name: Testing
         run: echo "Stub here ${{ steps.extract_branch.outputs.branch }}"
+      - run: git log
+      - run: echo "Hello world" > stub.txt
+      - run: git status
       # - uses: actions/checkout@v2
       #   with:
       #     stub: ${{ steps.release-please.outputs.major }}
