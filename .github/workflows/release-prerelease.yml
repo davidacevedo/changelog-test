@@ -26,6 +26,7 @@ jobs:
           script: |
             console.log(context)
             console.log('hi')
+            console.log(process.env)
       # - uses: actions/checkout@v2
       #   with:
       #     stub: ${{ steps.release-please.outputs.major }}
