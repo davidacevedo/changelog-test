@@ -38,7 +38,7 @@ jobs:
               pull_number: process.env.PR_NUM,
             });
 
-            console.log(pullRequest)
+            console.log(pullRequest.head.ref)
       # - uses: actions/checkout@v2
       #   with:
       #     stub: ${{ steps.release-please.outputs.major }}
