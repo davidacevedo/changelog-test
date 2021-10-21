@@ -19,6 +19,9 @@ jobs:
         id: extract_branch
       - name: Testing
         run: echo "Stub here ${{ steps.extract_branch.outputs.branch }}"
+      - name: Testing
+        run: echo "Stub here ${{ steps.release-please.outputs.pr }}"
+        pr
       - uses: actions/github-script@v5
         with:
           script: |
