@@ -1,12 +1,13 @@
 on:
   push:
     branches:
-      - master
+      - test
 name: release-please
 jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - run: git tag -l
       # - uses: GoogleCloudPlatform/release-please-action@v2
       #   id: release-please
       #   with:
