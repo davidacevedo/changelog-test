@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - nobranch
 name: release-please
 jobs:
   release-please:
@@ -43,7 +43,7 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: 'Update storybook for ${GITHUB_REF##*/}'
-      
+
 
 # - uses: actions/checkout@v2
 #         if: ${{ steps.tag-release.outputs.release_created }}
