@@ -2,8 +2,8 @@ name: Test Environments
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - 'v*.*.*'
 
 jobs:
   install:
