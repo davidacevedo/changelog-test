@@ -2,17 +2,34 @@ name: Test Environments
 
 on:
   push:
-    tags:
-      - 'v*.*.*'
+    branches:
+      - master
 
 jobs:
-  install:
+  does_stuff:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.find_version.outputs.version }}
+      production: ${{ steps.check_production.outputs.production }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: Find Release Version
+      id: find_version
+      run: |
+        RELEASE_VERSION=`git tag --contains master`
+        echo "::set-output name=version::${RELEASE_VERSION#v}"
+    - name: Check Production Release
+      id: check_production
+      if: steps.find_version.outputs.version
+      run: |
+        if [[ ${{ steps.find_version.outputs.version }} =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+          echo "::set-output name=production::true"
+        fi
+
+  print_stuff:
     runs-on: ubuntu-latest
     environment: production
+    needs: does_stuff
+    if: ${{ needs.does_stuff.outputs.version && github.ref == 'refs/heads/master' }}
     steps:
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-          check-latest: true
-      - name: npm install
-        run: npm ci
+      - run: echo ${{ needs.does_stuff.outputs.version }}
