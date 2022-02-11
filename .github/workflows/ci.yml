@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   does_stuff:
@@ -16,7 +19,10 @@ jobs:
     - name: Find Release Version
       id: find_version
       run: |
-        RELEASE_VERSION=`git tag --contains master`
+        RELEASE_VERSION=`git tag --contains ${GITHUB_HEAD_REF}`
+        echo ${GITHUB_HEAD_REF}
+        echo ${RELEASE_VERSION}
+        echo git tag --contains ${GITHUB_HEAD_REF}
         echo "::set-output name=version::${RELEASE_VERSION#v}"
     - name: Check Production Release
       id: check_production
