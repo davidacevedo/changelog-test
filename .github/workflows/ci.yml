@@ -26,10 +26,23 @@ jobs:
           echo "::set-output name=production::true"
         fi
 
-  print_stuff:
+  prod_1:
     runs-on: ubuntu-latest
     environment: production
     needs: does_stuff
-    if: ${{ needs.does_stuff.outputs.version && github.ref == 'refs/heads/master' }}
+    steps:
+      - run: echo ${{ needs.does_stuff.outputs.version }}
+
+  prod_2:
+    runs-on: ubuntu-latest
+    environment: production
+    needs: does_stuff
+    steps:
+      - run: echo ${{ needs.does_stuff.outputs.version }}
+
+  qa_1:
+    runs-on: ubuntu-latest
+    environment: QA
+    needs: does_stuff
     steps:
       - run: echo ${{ needs.does_stuff.outputs.version }}
