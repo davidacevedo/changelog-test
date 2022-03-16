@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.5.1](https://github.com/davidacevedo/changelog-test/compare/changelog-test-v1.5.0...changelog-test-v1.5.1) (2022-03-16)
+
+
+### Bug Fixes
+
+* add package lock ([d0329ae](https://github.com/davidacevedo/changelog-test/commit/d0329ae7156cae39f8e1c124e6978c239594d0ac))
+* release stuff ([d3bd6ff](https://github.com/davidacevedo/changelog-test/commit/d3bd6ffa615d0b854ec3236179c7b7bdd1990d54))
+
 ## [1.5.0](https://github.com/davidacevedo/changelog-test/compare/changelog-test-v1.4.0...changelog-test-v1.5.0) (2022-03-16)
 
 
