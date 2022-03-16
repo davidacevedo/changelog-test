@@ -23,7 +23,7 @@ jobs:
         with:
           release-type: node
           package-name: "changelog-test"
-          command: github-release
+          command: manifest
       - uses: actions/checkout@v2
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v2
