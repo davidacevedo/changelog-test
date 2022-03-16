@@ -1,5 +1,14 @@
 # Changelog
 
+### [1.5.2](https://github.com/davidacevedo/changelog-test/compare/changelog-test-v1.5.1...changelog-test-v1.5.2) (2022-03-16)
+
+
+### Bug Fixes
+
+* stuff ([7b8051e](https://github.com/davidacevedo/changelog-test/commit/7b8051ebba9639a51c6349c7cfcf22fc901baae8))
+* version stuff ([3421afd](https://github.com/davidacevedo/changelog-test/commit/3421afd047fbd0d53679a4ec77eeab52928e24c6))
+* version stuff ([4dbc88a](https://github.com/davidacevedo/changelog-test/commit/4dbc88aaec596fa9152bb9c91e481a6ff65f8223))
+
 ### [1.5.1](https://github.com/davidacevedo/changelog-test/compare/changelog-test-v1.5.0...changelog-test-v1.5.1) (2022-03-16)
 
 
