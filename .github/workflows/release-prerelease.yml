@@ -4,16 +4,17 @@ on:
       - master
 name: release-please-pr
 jobs:
-  # release-pr:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: google-github-actions/release-please-action@v3
-  #       id: release-please
-  #       with:
-  #         release-type: node
-  #         package-name: "changelog-test"
-  #         changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"refactor","section":"Miscellaneous","hidden":false}]'
-  #         command: manifest-pr
+  release-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release-please
+        with:
+          release-type: node
+          package-name: "changelog-test"
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"refactor","section":"Miscellaneous","hidden":false}]'
+          command: release-pr
+          version-file: ../../version
 
   release:
     runs-on: ubuntu-latest
@@ -23,7 +24,7 @@ jobs:
         with:
           release-type: node
           package-name: "changelog-test"
-          command: manifest
+          command: release-github
       - uses: actions/checkout@v2
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v2
