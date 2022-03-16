@@ -1,49 +1,41 @@
 on:
   push:
     branches:
-      - nobranch
-name: release-please
+      - master
+name: release-please-pr
 jobs:
-  release-please:
+  release-pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: GoogleCloudPlatform/release-please-action@v2
+      - uses: google-github-actions/release-please-action@v2
         id: release-please
         with:
-          token: ${{ secrets.WORKFLOW_GITHUB_KEY }}
           release-type: node
-          package-name: release-please-action
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
-      - name: Testing
-        run: echo "Stub here ${{ steps.extract_branch.outputs.branch }}"
-      - name: Testing
-        run: echo "Stub here ${{ steps.release-please.outputs.pr }}"
-      - uses: actions/github-script@v5
-        if: ${{ steps.release-please.outputs.pr }}
-        id: find-branch
-        env:
-          PR_NUM: ${{ steps.release-please.outputs.pr }}
+          package-name: "changelog-test"
+          changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"refactor","section":"Miscellaneous","hidden":false}]'
+          command: release-pr
+
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v2
+        id: release
         with:
-          result-encoding: string
-          script: |
-            const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/');
-            const { data: pullRequest } = await github.rest.pulls.get({
-              owner,
-              repo,
-              pull_number: process.env.PR_NUM,
-            });
-            return pullRequest.head.ref
+          release-type: node
+          package-name: "changelog-test"
+          command: github-release
       - uses: actions/checkout@v2
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/setup-node@v2
         with:
-          ref: ${{ steps.find-branch.outputs.result }}
-      - run: npm run docs
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: 'Update storybook for ${GITHUB_REF##*/}'
-
-
-# - uses: actions/checkout@v2
-#         if: ${{ steps.tag-release.outputs.release_created }}
+          node-version: '16.x'
+          registry-url: 'https://npm.pkg.github.com/'
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm ci
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm run dist
+        if: ${{ steps.release.outputs.release_created }}
+      - run: echo 'publishing'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: ${{ steps.release.outputs.release_created }}
