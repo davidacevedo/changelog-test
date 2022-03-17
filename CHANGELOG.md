@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.4](https://github.com/davidacevedo/changelog-test/compare/v1.2.3...v1.2.4) (2022-03-17)
+
+
+### Bug Fixes
+
+* fix ([93f9073](https://github.com/davidacevedo/changelog-test/commit/93f9073ae6951ad4f4f215dc385d77e6de454ad6))
+
 ### [1.2.3](https://github.com/davidacevedo/changelog-test/compare/v1.2.2...v1.2.3) (2022-03-17)
 
 
