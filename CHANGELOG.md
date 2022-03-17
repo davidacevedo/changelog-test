@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.2](https://github.com/davidacevedo/changelog-test/compare/v1.2.1...v1.2.2) (2022-03-17)
+
+
+### Bug Fixes
+
+* what happens ([cb41418](https://github.com/davidacevedo/changelog-test/commit/cb4141858f3e1c10a5a1e6cde75a22a99c8a6253))
+
 ### [1.2.1](https://github.com/davidacevedo/changelog-test/compare/v1.2.0...v1.2.1) (2022-03-17)
 
 
