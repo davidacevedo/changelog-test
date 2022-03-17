@@ -11,7 +11,6 @@ jobs:
         id: release-please
         with:
           release-type: node
-          package-name: "changelog-test"
           changelog-types: '[{"type":"feat","section":"Features","hidden":false},{"type":"fix","section":"Bug Fixes","hidden":false},{"type":"chore","section":"Miscellaneous","hidden":false},{"type":"refactor","section":"Miscellaneous","hidden":false}]'
           command: release-pr
 
@@ -22,7 +21,6 @@ jobs:
         id: release
         with:
           release-type: node
-          package-name: "changelog-test"
           command: github-release
       - uses: actions/checkout@v2
         if: ${{ steps.release.outputs.release_created }}
