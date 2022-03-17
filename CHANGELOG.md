@@ -1,5 +1,49 @@
 # Changelog
 
+## [1.2.0](https://github.com/davidacevedo/changelog-test/compare/v1.1.0...v1.2.0) (2022-03-16)
+
+
+### Features
+
+* add goodness ([2580b11](https://github.com/davidacevedo/changelog-test/commit/2580b115393b774b2930b6add394fcc9032d1dd7))
+* echo github ref ([84e1522](https://github.com/davidacevedo/changelog-test/commit/84e15225755ce30a9cc7a0f9331928605d083e6a))
+* force push story docs ([674cec5](https://github.com/davidacevedo/changelog-test/commit/674cec50b4ee6a219e10768d5c7eb743b5f7cad5))
+* hi ([dead888](https://github.com/davidacevedo/changelog-test/commit/dead888e54241970a618e9da9a76f8f53e7b79c1))
+* let's bump this up ([0519e63](https://github.com/davidacevedo/changelog-test/commit/0519e63de20f86aba0bcd0cf2a48f4abaee2efa3))
+* more info ([2f1b295](https://github.com/davidacevedo/changelog-test/commit/2f1b2955bd899b96c2b207b65f677de4b1f0bca4))
+* stub ([c859072](https://github.com/davidacevedo/changelog-test/commit/c8590727eba39538e337460b15005588eda0af62))
+* stub ([5dae42d](https://github.com/davidacevedo/changelog-test/commit/5dae42d26e8e86ce041a4d9f572d82b59c246ee1))
+* stub ([f45c5fb](https://github.com/davidacevedo/changelog-test/commit/f45c5fb77bae3021004a0aac35ac6597c24111fa))
+* stub ([1aab1c0](https://github.com/davidacevedo/changelog-test/commit/1aab1c0ad8eb84d92bb37bcc22f5c28508fe8dab))
+* stub ([00e3959](https://github.com/davidacevedo/changelog-test/commit/00e395947322e656fdd2b76a079a1e6cf24bb680))
+* update storybook commit ([b63542b](https://github.com/davidacevedo/changelog-test/commit/b63542bfda88a4ea52a8f90f43b4694e0da5ba5c))
+
+
+### Bug Fixes
+
+* add manifest ([6856398](https://github.com/davidacevedo/changelog-test/commit/685639858157eccda3f0d91011f1c0af93a946d7))
+* add manifest-release ([bac735a](https://github.com/davidacevedo/changelog-test/commit/bac735ae9ac38d8cdb4691727dcad68a54199af9))
+* add package lock ([d0329ae](https://github.com/davidacevedo/changelog-test/commit/d0329ae7156cae39f8e1c124e6978c239594d0ac))
+* demo testing ([36cceeb](https://github.com/davidacevedo/changelog-test/commit/36cceeb9f222f53f19869c2b9f580cd5d572f6e6))
+* hello world ([20e7cfd](https://github.com/davidacevedo/changelog-test/commit/20e7cfd471186dd6a4557894f7284f4602e11cc8))
+* no-manifest: ([f9ebba0](https://github.com/davidacevedo/changelog-test/commit/f9ebba038baa79a1070bfa135651da8c4697e74d))
+* release stuff ([d3bd6ff](https://github.com/davidacevedo/changelog-test/commit/d3bd6ffa615d0b854ec3236179c7b7bdd1990d54))
+* setup release-please ([4f234be](https://github.com/davidacevedo/changelog-test/commit/4f234be451ee53302a165bde03cbd06011465ed8))
+* stub ([0932103](https://github.com/davidacevedo/changelog-test/commit/0932103300c0f63727a91b0f55886e46a9b7cc8b))
+* stuff ([7b8051e](https://github.com/davidacevedo/changelog-test/commit/7b8051ebba9639a51c6349c7cfcf22fc901baae8))
+* version stuff ([3421afd](https://github.com/davidacevedo/changelog-test/commit/3421afd047fbd0d53679a4ec77eeab52928e24c6))
+* version stuff ([4dbc88a](https://github.com/davidacevedo/changelog-test/commit/4dbc88aaec596fa9152bb9c91e481a6ff65f8223))
+
+
+### Miscellaneous
+
+* bootstrap releases for path: . ([8d2ce84](https://github.com/davidacevedo/changelog-test/commit/8d2ce84c5cdecc17419e7ca4699f9071b1662bed))
+* bootstrap releases for path: . ([29dbc73](https://github.com/davidacevedo/changelog-test/commit/29dbc73c75c66229cc6f3dceb0aae2a86fb12851))
+* **master:** release changelog-test 1.5.0 ([04a6f4c](https://github.com/davidacevedo/changelog-test/commit/04a6f4cd625f9e30860c7d1178c588e772e01643))
+* **master:** release changelog-test 1.5.1 ([d98ea10](https://github.com/davidacevedo/changelog-test/commit/d98ea10da42292149c8ed2364dfc1b8f0e676585))
+* **master:** release changelog-test 1.5.2 ([e4d8ec0](https://github.com/davidacevedo/changelog-test/commit/e4d8ec021e07b3839bddff30b04429e5b2cfae63))
+* **master:** release changelog-test 1.6.0 ([461758c](https://github.com/davidacevedo/changelog-test/commit/461758c233b0ce2c0712215bbd9cd8c8877ff67c))
+
 ## [1.6.0](https://github.com/davidacevedo/changelog-test/compare/changelog-test-v1.5.2...changelog-test-v1.6.0) (2022-03-16)
 
 
