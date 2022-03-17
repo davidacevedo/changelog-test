@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/davidacevedo/changelog-test/compare/v1.2.4...v1.3.0) (2022-03-17)
+
+
+### Features
+
+* package name test ([2cc9e34](https://github.com/davidacevedo/changelog-test/commit/2cc9e345feae3ac9a263c43473e79e4ce8a2b7d1))
+
 ### [1.2.4](https://github.com/davidacevedo/changelog-test/compare/v1.2.3...v1.2.4) (2022-03-17)
 
 
