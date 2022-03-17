@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.3.2](https://github.com/davidacevedo/changelog-test/compare/v1.3.1...v1.3.2) (2022-03-17)
+
+
+### Bug Fixes
+
+* add sleep to release PR ([82a89a8](https://github.com/davidacevedo/changelog-test/commit/82a89a8b012a726ca5a225540e4f29b552cfdd32))
+
 ### [1.3.1](https://github.com/davidacevedo/changelog-test/compare/v1.3.0...v1.3.1) (2022-03-17)
 
 
