@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.2.1](https://github.com/davidacevedo/changelog-test/compare/v1.2.0...v1.2.1) (2022-03-17)
+
+
+### Bug Fixes
+
+* manifest no longer needed ([3472a69](https://github.com/davidacevedo/changelog-test/commit/3472a697a44345f11287e110f9cabfa88c4fd998))
+
 ## [1.2.0](https://github.com/davidacevedo/changelog-test/compare/v1.1.0...v1.2.0) (2022-03-16)
 
 
