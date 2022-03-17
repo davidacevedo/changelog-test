@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.3.1](https://github.com/davidacevedo/changelog-test/compare/v1.3.0...v1.3.1) (2022-03-17)
+
+
+### Bug Fixes
+
+* add package-name back ([a803345](https://github.com/davidacevedo/changelog-test/commit/a8033458e86edaed128a4ca123066a7ad353acc4))
+
 ## [1.3.0](https://github.com/davidacevedo/changelog-test/compare/v1.2.4...v1.3.0) (2022-03-17)
 
 
